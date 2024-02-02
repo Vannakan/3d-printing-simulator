@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8512506564347919975}
   - component: {fileID: 3934672861914087760}
   - component: {fileID: 7239835987915737815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PrinterNode
   m_TagString: PrinterNode
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

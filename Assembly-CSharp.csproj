@@ -64,15 +64,19 @@
     <Compile Include="Assets\PrinterNode\PrinterNode.cs" />
     <Compile Include="Assets\Tags.cs" />
     <Compile Include="Assets\Player\LerpToViewpoint.cs" />
+    <Compile Include="Assets\Shop\SpawnPurchase.cs" />
     <Compile Include="Assets\Player\PlayerMove.cs" />
+    <Compile Include="Assets\UpdateMoneyTemp.cs" />
     <Compile Include="Assets\Player\MoveCamera.cs" />
     <Compile Include="Assets\Player\PlayerInteract.cs" />
+    <Compile Include="Assets\MenuManager.cs" />
     <Compile Include="Assets\ButtonHover.cs" />
     <Compile Include="Assets\Print\Print.cs" />
     <Compile Include="Assets\PlayerInventory\PlayerInventory.cs" />
     <Compile Include="Assets\Player\CameraController.cs" />
     <Compile Include="Assets\Player\RotatePlayer.cs" />
     <Compile Include="Assets\Printer\Spawner.cs" />
+    <Compile Include="Assets\Shop\Shop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
