@@ -5,17 +5,27 @@ public class Printer : MonoBehaviour
     public GameObject PrintPrefab;
     public Transform SpawnPoint;
 
+    public GameObject SpoolHolder; //remove this
+
     public float TotalFilament;
     public float PrintTime;
+    public string PrintStatus;
 
     private bool _isPrinting;
     private float _printStart;
     private readonly float _printCost = .1f;
     public Renderer PrintMesh;
 
-    public void Toggle()
+    public void Toggle(string status = "")
     {
         _isPrinting = !_isPrinting;
+
+        if (status == string.Empty)
+        {
+            status = _isPrinting ? "Printing" : "Not Printing";
+        }
+
+        PrintStatus = status;
         ChangeColor();
     }
 
@@ -23,12 +33,22 @@ public class Printer : MonoBehaviour
 
     void ChangeColor() => PrintMesh.material.SetColor("_Color", _isPrinting == true ? Color.green : Color.red);
 
+
+    private void Start()
+    {
+        PrintStatus = "Not Printing";
+        ChangeColor();
+    }
+
     void Update()
     {
         if (_isPrinting)
         {
             if (TotalFilament <= 0.0)
-                Toggle();
+            {
+                SpoolHolder.SetActive(false);
+                Toggle("No Filament");
+            }
             else TotalFilament -= _printCost;     
         }
 
@@ -47,6 +67,7 @@ public class Printer : MonoBehaviour
         {
             TotalFilament += 350; //todo: filament.amount
             Destroy(other.gameObject);
+            SpoolHolder.SetActive(true);
         }
     }
 }
