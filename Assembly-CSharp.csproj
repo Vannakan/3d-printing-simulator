@@ -70,12 +70,16 @@
     <Compile Include="Assets\Player\MoveCamera.cs" />
     <Compile Include="Assets\Player\PlayerInteract.cs" />
     <Compile Include="Assets\MenuManager.cs" />
+    <Compile Include="Assets\Printer\FilamentSlot.cs" />
+    <Compile Include="Assets\Printer\FilamentUiBinding.cs" />
     <Compile Include="Assets\ButtonHover.cs" />
     <Compile Include="Assets\Print\Print.cs" />
+    <Compile Include="Assets\Printer\PrintStatusUiBinding.cs" />
     <Compile Include="Assets\PlayerInventory\PlayerInventory.cs" />
     <Compile Include="Assets\Player\CameraController.cs" />
     <Compile Include="Assets\Player\RotatePlayer.cs" />
     <Compile Include="Assets\Printer\Spawner.cs" />
+    <Compile Include="Assets\Shop\ShopButton.cs" />
     <Compile Include="Assets\Shop\Shop.cs" />
   </ItemGroup>
   <ItemGroup>

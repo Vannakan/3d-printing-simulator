@@ -116,8 +116,9 @@ GameObject:
   - component: {fileID: 1910138983251540145}
   - component: {fileID: 5265475277420387405}
   - component: {fileID: 8601249593895069765}
+  - component: {fileID: 5074949472276370306}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +141,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4.68, y: 45.3}
-  m_SizeDelta: {x: 250, y: 50}
+  m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5265475277420387405
 CanvasRenderer:
@@ -239,6 +240,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5074949472276370306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445221915144183127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487a6b1d2715a7548b8a27430cd11198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Printer: {fileID: 29817555446893282}
+  TextMeshPro: {fileID: 8601249593895069765}
+  Prefix: 'Status:'
 --- !u!1 &5806330134405092332
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +663,7 @@ MonoBehaviour:
       - m_Target: {fileID: 29817555446893282}
         m_TargetAssemblyTypeName: Printer, Assembly-CSharp
         m_MethodName: Toggle
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1031,6 +1047,7 @@ GameObject:
   - component: {fileID: 7437445923434288522}
   - component: {fileID: 4589087648148263669}
   - component: {fileID: 4073226488571086198}
+  - component: {fileID: 6397353285554429171}
   m_Layer: 5
   m_Name: Filament
   m_TagString: Untagged
@@ -1055,7 +1072,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4.68, y: 35.6}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4589087648148263669
 CanvasRenderer:
@@ -1154,6 +1171,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6397353285554429171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076678559076501024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8945b4811f7754c4fbcfd99ef9e5f71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Printer: {fileID: 29817555446893282}
+  Prefix: 'Filament:'
+  TextMeshPro: {fileID: 4073226488571086198}
 --- !u!1 &8242208759197048473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1328,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 2686724326985932320}
   TotalFilament: 0
   PrintTime: 5
+  PrintStatus: 
   PrintMesh: {fileID: 8937318563847689001}
 --- !u!54 &7528935323253293815
 Rigidbody:

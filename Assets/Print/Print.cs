@@ -8,7 +8,7 @@ public class Print : MonoBehaviour
         Item = new Item()
         {
             Name = "Item",
-            Value = default,
+            Value = 25,
         };
     }
 }

@@ -7,14 +7,14 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Image Image;
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Hello");
+      //  Debug.Log("Hello");
         var test = Image.GetComponent<Image>();
         test.color = Color.red;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Goodbye");
+        //Debug.Log("Goodbye");
         var test = Image.GetComponent<Image>();
         test.color = Color.white;
     }

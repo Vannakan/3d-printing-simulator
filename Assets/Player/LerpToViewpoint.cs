@@ -52,28 +52,9 @@ public class LerpToViewpoint : MonoBehaviour
                 return;
             }
 
-            Debug.Log($"{Vector3.Distance(gameObject.transform.position, Viewpoint.transform.position)}");
+            //Debug.Log($"{Vector3.Distance(gameObject.transform.position, Viewpoint.transform.position)}");
             gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, Viewpoint.position, Time.deltaTime);
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Viewpoint.rotation, Time.deltaTime);
         }
-
-        //if (Input.GetKeyUp(KeyCode.F))
-        //{
-        //    if (!_transitioning && !_occupied)
-        //    {
-        //        transform.parent = null;              
-        //        _transitioning = true;
-        //        Cursor.lockState = CursorLockMode.None;
-        //    }
-        //    else if(_occupied || _transitioning)
-        //    {
-        //        //todo: Lerp back to original position
-        //        _transitioning = false;
-        //        _occupied = false;
-        //        Cursor.lockState = CursorLockMode.Locked;
-        //        transform.parent = _parent;
-        //        transform.localPosition = _initialPosition;
-        //    }         
-        //}
     }
 }
