@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -7,23 +5,23 @@ public class PlayerStats : MonoBehaviour
     public double CurrentXp = 0;
     public double CurrentLevel = 0;
     public double RequiredXp = 100;
-    public PlayerHud playerHud;
+    public PlayerHud PlayerHud;
 
      public void AddXp(double xpAmount)
     {
-        currentXp += xpAmount;
+        CurrentXp += xpAmount;
         AddLevel();
-        Debug.Log($"XP added: {currentXp}");
+        Debug.Log($"XP added: {CurrentXp}");
     }
 
     public void AddLevel()
     {
-        if (currentXp > requiredXp)
+        if (CurrentXp > RequiredXp)
         {
-            currentLevel++;
-            requiredXp = (requiredXp + 100) * 1.1;
+            CurrentLevel++;
+            RequiredXp = (RequiredXp + 100) * 1.1;
         }
 
-        playerHud.updateXpText(currentXp, currentLevel, requiredXp);
+        PlayerHud.UpdateXpText(CurrentXp, CurrentLevel, RequiredXp);
     }
 }
