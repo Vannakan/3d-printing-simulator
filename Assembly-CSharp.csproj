@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Printer\FilamentUiBinding.cs" />
     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
     <Compile Include="Assets\Scripts\PlayerInventory\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Shop\BackButton.cs" />
     <Compile Include="Assets\Scripts\Printer\Spawner.cs" />
     <Compile Include="Assets\Scripts\Printer\FilamentSlot.cs" />
     <Compile Include="Assets\Scripts\Printer\Printer.cs" />
