@@ -34,6 +34,12 @@ public class ShopApplication : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        if(CurrentPage != null)
+        { CurrentPage.SetActive(true); }
+    }
+
     public void AddToBasket(ShopItem item)
     {
 
