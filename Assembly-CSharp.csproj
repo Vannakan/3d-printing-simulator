@@ -78,12 +78,16 @@
     <Compile Include="Assets\Scripts\Printer\Spawner.cs" />
     <Compile Include="Assets\Scripts\Printer\FilamentSlot.cs" />
     <Compile Include="Assets\Scripts\Printer\Printer.cs" />
+    <Compile Include="Assets\XpSystem\PlayerController.cs" />
+    <Compile Include="Assets\XpSystem\PlayerHud.cs" />
     <Compile Include="Assets\Scripts\Player\MoveCamera.cs" />
+    <Compile Include="Assets\XpSystem\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PrinterNode\PrinterNode.cs" />
     <Compile Include="Assets\Scripts\Printer\PrintStatusUiBinding.cs" />
     <Compile Include="Assets\Scripts\Tags.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInteract.cs" />
+    <Compile Include="Assets\XpSystem\GameManager.cs" />
     <Compile Include="Assets\Scripts\UpdateMoneyTemp.cs" />
     <Compile Include="Assets\Scripts\Print\Print.cs" />
   </ItemGroup>
