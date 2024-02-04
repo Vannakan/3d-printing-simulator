@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 464850830}
   - component: {fileID: 464850829}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -905,7 +905,7 @@ RectTransform:
   - {fileID: 590675482}
   - {fileID: 1821001930}
   - {fileID: 1288069241}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2013355353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1847,6 +1847,7 @@ Transform:
   - {fileID: 1861091634}
   - {fileID: 295276349}
   - {fileID: 203255073}
+  - {fileID: 2013355353}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &984461685
@@ -1966,7 +1967,8 @@ MonoBehaviour:
   currentXp: 0
   currentLevel: 0
   requiredXp: 100
-  GetPlayerController: {fileID: 0}
+  playerHud: {fileID: 2013355354}
+  passed: 0
 --- !u!114 &984461692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,7 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93417c868c71c74280b49429f5f8fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHud: {fileID: 464850831}
+  playerHud: {fileID: 2013355354}
 --- !u!1 &1010599567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2148,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 29817555446893282, guid: cc2c346fcdc6802469f277cb636534be, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1676733197}
     - target: {fileID: 7293880276926904516, guid: cc2c346fcdc6802469f277cb636534be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.191
@@ -2238,7 +2244,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228891796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -3121,7 +3127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 135.2628, y: 63.6}
+  m_AnchoredPosition: {x: 135.2628, y: 200.8}
   m_SizeDelta: {x: 270.5256, y: 42.51889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821001932
@@ -3144,7 +3150,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: XP
+  m_text: 'Current XP: {currentXp} Current Level: {currentLevel} Required Xp to next
+    level: {requiredXp}'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3528,6 +3535,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2013355352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013355353}
+  - component: {fileID: 2013355354}
+  m_Layer: 0
+  m_Name: PlayerHud
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2013355353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013355352}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.9453325, y: 18.80433, z: -23.75733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 464850832}
+  m_Father: {fileID: 984461684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2013355354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013355352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f2109636f5c524cbf5dc414619fa40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Xp: {fileID: 1821001932}
+  playerController: {fileID: 984461692}
+  playerStats: {fileID: 0}
 --- !u!1 &2043747153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4045,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 29817555446893282, guid: cc2c346fcdc6802469f277cb636534be, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1676733197}
     - target: {fileID: 3917829720549741000, guid: cc2c346fcdc6802469f277cb636534be, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4127,5 +4186,4 @@ SceneRoots:
   - {fileID: 843304833}
   - {fileID: 1734207303}
   - {fileID: 915778416334045092}
-  - {fileID: 464850832}
   - {fileID: 1676733198}
