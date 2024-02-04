@@ -6,13 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public GameObject player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Player;
 
     // Update is called once per frame
     void Update()
@@ -20,12 +14,9 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown("escape"))
         {
             quitGame();
-        }
-    
-
-   
+        }   
     }
-    public void quitGame()
+    public void QuitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
     }

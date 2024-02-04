@@ -4,28 +4,12 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public double currentXp = 0;
-    public double currentLevel = 0;
-    public double requiredXp = 100;
+    public double CurrentXp = 0;
+    public double CurrentLevel = 0;
+    public double RequiredXp = 100;
     public PlayerHud playerHud;
-    public bool passed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Initialization code (if needed)
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (passed)
-        {
-            Debug.Log("Passed");
-        }
-    }
-
-    public void AddXp(double xpAmount)
+     public void AddXp(double xpAmount)
     {
         currentXp += xpAmount;
         AddLevel();
