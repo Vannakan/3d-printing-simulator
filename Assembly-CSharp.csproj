@@ -61,9 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Printer\Printer.cs" />
+    <Compile Include="Assets\Shop\Computer.cs" />
     <Compile Include="Assets\PrinterNode\PrinterNode.cs" />
     <Compile Include="Assets\Tags.cs" />
     <Compile Include="Assets\Player\LerpToViewpoint.cs" />
+    <Compile Include="Assets\Shop\DesktopIcon.cs" />
     <Compile Include="Assets\Shop\SpawnPurchase.cs" />
     <Compile Include="Assets\Player\PlayerMove.cs" />
     <Compile Include="Assets\UpdateMoneyTemp.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Player\CameraController.cs" />
     <Compile Include="Assets\Player\RotatePlayer.cs" />
     <Compile Include="Assets\Printer\Spawner.cs" />
+    <Compile Include="Assets\Player\PlayerController.cs" />
     <Compile Include="Assets\Shop\ShopButton.cs" />
     <Compile Include="Assets\Shop\Shop.cs" />
   </ItemGroup>
