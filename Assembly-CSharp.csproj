@@ -60,6 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Users\jdw_l\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="F:\3DPrintingSimulatorGame\3d-printing-simulator\Assets\SpaceNavigator\Plugins\TDx.TDxInput.dll" />
     <Analyzer Include="F:\2022.3.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="F:\2022.3.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -68,19 +69,14 @@
     <Compile Include="Assets\PrinterNode\PrinterNode.cs" />
     <Compile Include="Assets\Tags.cs" />
     <Compile Include="Assets\Player\LerpToViewpoint.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\FlyAround.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Follow curve\Scripts\TorusController.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Follow curve\Scripts\Torus.cs" />
+    <Compile Include="Assets\NotUsing\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Shop\SpawnPurchase.cs" />
     <Compile Include="Assets\Player\PlayerMove.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\Settings\Settings.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigator.cs" />
     <Compile Include="Assets\Player\PlayerHud.cs" />
     <Compile Include="Assets\UpdateMoneyTemp.cs" />
     <Compile Include="Assets\Player\MoveCamera.cs" />
     <Compile Include="Assets\Player\PlayerInteract.cs" />
     <Compile Include="Assets\MenuManager.cs" />
-    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\PlayerInventory\PlayerStats.cs" />
     <Compile Include="Assets\Printer\FilamentSlot.cs" />
     <Compile Include="Assets\Printer\FilamentUiBinding.cs" />
@@ -91,14 +87,9 @@
     <Compile Include="Assets\Player\CameraController.cs" />
     <Compile Include="Assets\Player\RotatePlayer.cs" />
     <Compile Include="Assets\Printer\Spawner.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\SmoothFollow2.cs" />
     <Compile Include="Assets\MainMenu\Scripts\UIManager.cs" />
     <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigatorMac.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\QuaternionExtensions.cs" />
     <Compile Include="Assets\Player\PlayerController.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigatorWindows.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\Settings\Locks.cs" />
     <Compile Include="Assets\Shop\ShopButton.cs" />
     <Compile Include="Assets\Shop\Shop.cs" />
   </ItemGroup>
@@ -108,27 +99,23 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\NotUsing\QuickOutline\Resources\Shaders\OutlineMask.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\SpaceNavigator\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\QuickOutline\Readme.txt" />
+    <None Include="Assets\NotUsing\QuickOutline\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\SpaceNavigator\Plugins\TDx.TDxInput.dll" />
     <None Include="Assets\Test.uss" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\SpaceNavigator\Changelog.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
-    <None Include="Assets\SpaceNavigator\License.txt" />
+    <None Include="Assets\NotUsing\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -472,10 +459,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="TDx.TDxInput">
-      <HintPath>Assets\SpaceNavigator\Plugins\TDx.TDxInput.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
