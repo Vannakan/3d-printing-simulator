@@ -10,21 +10,6 @@ public class PlayerInteract : MonoBehaviour
     public int InteractDistance;
 
 
-/*
-    private void setCurrentPrinter(Printer p)
-    {
-        if(gameManager.GetComponent<GameManager>().go == p) return;
-
-        if(gameManager.GetComponent<GameManager>().go!= null) gameManager.GetComponent<GameManager>().go.isLooking = false;
-
-        gameManager.GetComponent<GameManager>().go = p;
-
-        if(gameManager.GetComponent<GameManager>().go!=null) gameManager.GetComponent<GameManager>().go.isLooking = true;
-
-    }
-    */
-
-
 
     void Update()
     {
@@ -40,24 +25,6 @@ public class PlayerInteract : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, InteractDistance, layer_mask))
         {
-
-            /*
-            hit.transform.gameObject.GetComponent<Printer>().isLooking = true;
-
-            var interact = hit.transform.gameObject.GetComponent<Printer>();
-            gameManager.GetComponent<GameManager>().go = interact;
-
-            if(hit.collider.TryGetComponent<Printer>(out var printer))
-            {
-                setCurrentPrinter(printer);
-            }
-            else
-            {
-                setCurrentPrinter(null);
-            }
-
-            */
-
 
             if (Input.GetKeyUp(KeyCode.Space))
             {

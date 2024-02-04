@@ -8,6 +8,7 @@ public class LerpToViewpoint : MonoBehaviour
     private Transform _parent;
     private bool _occupied;
     private Vector3 _initialPosition;
+    public Canvas playerHud;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class LerpToViewpoint : MonoBehaviour
                     transform.parent = null;
                     _transitioning = true;
                     Cursor.lockState = CursorLockMode.None;
+                    playerHud.enabled = false;
                 }
             }
             else if (_occupied || _transitioning)
@@ -40,6 +42,7 @@ public class LerpToViewpoint : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 transform.parent = _parent;
                 transform.localPosition = _initialPosition;
+                playerHud.enabled = true;
             }
         }
 
