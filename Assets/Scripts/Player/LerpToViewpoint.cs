@@ -17,7 +17,6 @@ public class LerpToViewpoint : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyUp(KeyCode.F))
         {
             if (!_transitioning && !_occupied)
@@ -31,7 +30,6 @@ public class LerpToViewpoint : MonoBehaviour
                     _transitioning = true;
                     Cursor.lockState = CursorLockMode.None;
                     GameObject.Find("Player").GetComponentInChildren<Canvas>().enabled = false;
-
                 }
             }
             else if (_occupied || _transitioning)
