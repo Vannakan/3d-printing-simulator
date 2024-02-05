@@ -7,11 +7,10 @@ public class PlayerStats : MonoBehaviour
     public double RequiredXp = 100;
     public PlayerHud PlayerHud;
 
-     public void AddXp(double xpAmount)
+    public void AddXp(double xpAmount)
     {
         CurrentXp += xpAmount;
         AddLevel();
-        Debug.Log($"XP added: {CurrentXp}");
     }
 
     public void AddLevel()

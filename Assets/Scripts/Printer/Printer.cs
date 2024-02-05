@@ -15,6 +15,7 @@ public class Printer : MonoBehaviour
     private float _printStart;
     private readonly float _printCost = .1f;
     public Renderer PrintMesh;
+    public int XpValue = 5;
 
     public void Toggle(string status = "")
     {
@@ -49,13 +50,14 @@ public class Printer : MonoBehaviour
                 SpoolHolder.SetActive(false);
                 Toggle("No Filament");
             }
-            else TotalFilament -= _printCost;     
+            else TotalFilament -= _printCost;
         }
 
         if (Time.time > _printStart && _isPrinting)
         {
             Instantiate(PrintPrefab, SpawnPoint.position, transform.rotation);
             _printStart = Time.time + PrintTime;
+            GameObject.Find("Player").GetComponent<PlayerStats>().AddXp(XpValue);
         }
 
         transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
@@ -63,7 +65,7 @@ public class Printer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == Tags.Spool)
+        if (other.tag == Tags.Spool)
         {
             TotalFilament += 350; //todo: filament.amount
             Destroy(other.gameObject);
