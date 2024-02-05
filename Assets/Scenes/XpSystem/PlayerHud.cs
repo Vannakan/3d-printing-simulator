@@ -5,12 +5,12 @@ public class PlayerHud : MonoBehaviour
 {
     public TextMeshProUGUI XP;
     public PlayerController PlayerController;
-    public PlayerStats PlayerStats;
-    
+    private PlayerStats _playerStats;
+
     void Start()
     {
-        PlayerStats = PlayerController.GetComponent<PlayerStats>();
-        UpdateXpText(PlayerStats.CurrentXp, PlayerStats.CurrentLevel, PlayerStats.CurrentXp);        
+        _playerStats = PlayerController.GetComponent<PlayerStats>();
+        UpdateXpText(_playerStats.CurrentXp, _playerStats.CurrentLevel, _playerStats.RequiredXp);
     }
 
     public void UpdateXpText(double currentXp, double currentLevel, double requiredXp)
