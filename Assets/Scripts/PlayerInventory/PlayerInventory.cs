@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Item
 {
+    public BasketItemType Type;
     public string Name { get; set; }
     public int Value { get; set; }
 }

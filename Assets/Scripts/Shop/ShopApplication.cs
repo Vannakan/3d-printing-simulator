@@ -1,38 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Basket
-{
-    private List<ShopItem> _items = new List<ShopItem>();
-}
-public enum ItemType
-{
-    Printer,
-    Filament,
-    Upgrade, 
-    Prop
-}
-public class ShopItem
-{
-    public ItemType ItemType;
-}
-
 public class ShopApplication : MonoBehaviour
 {
     public GameObject CurrentPage;
-    public Basket Basket;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public TestBasket TestBasket;
+    public Checkout Checkout;
 
     private void OnEnable()
     {
@@ -40,9 +13,15 @@ public class ShopApplication : MonoBehaviour
         { CurrentPage.SetActive(true); }
     }
 
-    public void AddToBasket(ShopItem item)
+    public void AddToBasket(int type, int amount)
     {
+        TestBasket.AddItem((BasketItemType)type, amount);
+    }
 
+    public void CheckoutBasket()
+    {
+        Checkout.CheckoutBasket(TestBasket.BasketItems);
+        TestBasket.BasketItems.Clear();
     }
 
     public void SwitchPage(GameObject gameObject)

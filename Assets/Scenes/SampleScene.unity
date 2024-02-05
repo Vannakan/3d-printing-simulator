@@ -2465,6 +2465,7 @@ GameObject:
   - component: {fileID: 458305005}
   - component: {fileID: 458305007}
   - component: {fileID: 458305006}
+  - component: {fileID: 458305008}
   m_Layer: 0
   m_Name: Checkout
   m_TagString: Untagged
@@ -2588,6 +2589,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458305004}
   m_CullTransparentMesh: 1
+--- !u!114 &458305008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458305004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf750a1b6dfb7b4688b857b634b9470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerInventory: {fileID: 0}
 --- !u!1 &464850828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5067,7 +5081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &924063036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5912,7 +5926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1013789748
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5990,6 +6004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentPage: {fileID: 0}
+  TestBasket: {fileID: 1436183958}
+  Checkout: {fileID: 0}
 --- !u!1 &1023373092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6002,6 +6018,7 @@ GameObject:
   - component: {fileID: 1023373096}
   - component: {fileID: 1023373095}
   - component: {fileID: 1023373094}
+  - component: {fileID: 1023373097}
   m_Layer: 0
   m_Name: Props_Buy_Item
   m_TagString: Untagged
@@ -6072,7 +6089,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023373095}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1023373097}
+        m_TargetAssemblyTypeName: AddToCart, Assembly-CSharp
+        m_MethodName: Add
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1023373095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6111,6 +6140,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023373092}
   m_CullTransparentMesh: 1
+--- !u!114 &1023373097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023373092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78bdbe00034893448b4c6c06291e642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amount: 0
+  ItemType: 0
+  ShopApplication: {fileID: 1013789751}
 --- !u!1 &1028955100
 GameObject:
   m_ObjectHideFlags: 0
@@ -7856,6 +7900,7 @@ GameObject:
   - component: {fileID: 1436183955}
   - component: {fileID: 1436183957}
   - component: {fileID: 1436183956}
+  - component: {fileID: 1436183958}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -7979,6 +8024,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436183954}
   m_CullTransparentMesh: 1
+--- !u!114 &1436183958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436183954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf86d2494243e141af108692bbc2dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalText: {fileID: 1436183956}
 --- !u!1 &1463115429
 GameObject:
   m_ObjectHideFlags: 0
@@ -9908,7 +9966,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1023373097}
+        m_TargetAssemblyTypeName: AddToCart, Assembly-CSharp
+        m_MethodName: SetAmount
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1914502023
 MonoBehaviour:
