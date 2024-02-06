@@ -10,5 +10,4 @@ public class Item
 public class PlayerInventory : MonoBehaviour
 {
     public List<Item> Items = new List<Item>();
-    public int Money;
 }

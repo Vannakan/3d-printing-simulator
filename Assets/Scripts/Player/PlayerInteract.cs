@@ -1,9 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
     public PlayerInventory Inventory;
-    public GameObject _target;
     public GameObject Cam;
     public int InteractDistance;
 

@@ -16,6 +16,8 @@ public class Printer : MonoBehaviour
     private readonly float _printCost = .1f;
     public Renderer PrintMesh;
     public int XpValue = 5;
+    public GameManager GameManager;
+    private PlayerStats _playerStats;
 
     public void Toggle(string status = "")
     {
@@ -35,10 +37,15 @@ public class Printer : MonoBehaviour
     void ChangeColor() => PrintMesh.material.SetColor("_Color", _isPrinting == true ? Color.green : Color.red);
 
 
-    private void Start()
+    private void LateUpdate()
     {
-        PrintStatus = "Not Printing";
-        ChangeColor();
+        do
+        {
+            PrintStatus = "Not Printing";
+            ChangeColor();
+            _playerStats = GameManager.Player.GetComponent<PlayerController>().PlayerStats;
+        } while (false);
+
     }
 
     void Update()
@@ -57,7 +64,8 @@ public class Printer : MonoBehaviour
         {
             Instantiate(PrintPrefab, SpawnPoint.position, transform.rotation);
             _printStart = Time.time + PrintTime;
-            GameObject.Find("Player").GetComponent<PlayerStats>().AddXp(XpValue);
+            _playerStats.AddXp(XpValue);
+            Debug.Log("add xp");
         }
 
         transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);

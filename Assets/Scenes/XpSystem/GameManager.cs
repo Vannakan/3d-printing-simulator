@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             QuitGame();
-        }   
+        }
     }
     public void QuitGame()
     {

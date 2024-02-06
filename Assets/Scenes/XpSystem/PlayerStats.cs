@@ -5,6 +5,7 @@ public class PlayerStats : MonoBehaviour
     public double CurrentXp = 0;
     public double CurrentLevel = 0;
     public double RequiredXp = 100;
+    public int Money = 420;
     public PlayerHud PlayerHud;
 
     public void AddXp(double xpAmount)
