@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scenes\XpSystem\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Shop\Shop.cs" />
     <Compile Include="Assets\Scripts\ButtonHover.cs" />
+    <Compile Include="Assets\TestCanvas\LevelButton.cs" />
     <Compile Include="Assets\Scripts\Shop\Shop2.cs" />
     <Compile Include="Assets\Scripts\Shop\ShopButton.cs" />
     <Compile Include="Assets\Scenes\XpSystem\GameManager.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scenes\XpSystem\PlayerController.cs" />
     <Compile Include="Assets\Scenes\XpSystem\PlayerHud.cs" />
     <Compile Include="Assets\Scripts\Printer\FilamentUiBinding.cs" />
+    <Compile Include="Assets\Scripts\Printer\PrinterUIController.cs" />
     <Compile Include="Assets\Scripts\Shop\BackButton.cs" />
     <Compile Include="Assets\UnityPackages\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Printer\Spawner.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInteract.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Print\Print.cs" />
+    <Compile Include="Assets\TestCanvas\LevelBrowser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityPackages\TextMesh Pro\Shaders\TMPro.cginc" />

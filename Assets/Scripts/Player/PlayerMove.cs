@@ -1,3 +1,4 @@
+using Unity.Burst.CompilerServices;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -13,12 +14,17 @@ public class PlayerMove : MonoBehaviour
 
     private float _xRotation = 0f;
 
+    public bool CursorVisible;
+    public CursorLockMode PlayerCursor;
+
     private void Start()
     {
         _player = this.gameObject;
         _rigidbody = GetComponent<Rigidbody>();
         _orientation = GameObject.Find("Main Camera").transform;
         Cursor.lockState = CursorLockMode.Locked;
+        CursorVisible = Cursor.visible;
+        CursorVisible = false;
     }
 
     void Update()
@@ -34,6 +40,21 @@ public class PlayerMove : MonoBehaviour
             _xRotation -= mouseY;
             _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
             _orientation.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            CursorVisible = !CursorVisible;
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+
+
         }
     }
 
