@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc713a54f3921cf4fa6b72a399277ca8, type: 3}
+  m_Name: Printer
+  m_EditorClassIdentifier: 
+  Name: Printer
+  ItemType: 0
+  Prefab: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 6ea3daba59e9a184e90549e50df5426b, type: 3}
+  WorldObject: {fileID: 7311790855593563489, guid: 1f52f954d16a773459c6b2633785d93e, type: 3}

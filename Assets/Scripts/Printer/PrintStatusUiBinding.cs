@@ -1,24 +1,25 @@
+using PrinterBehaviour;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class PrintStatusUiBinding : MonoBehaviour
 {
-    public Printer Printer;
+    public PrintBehaviour Printer;
     public TextMeshProUGUI TextMeshPro;
     public string Prefix;
 
-    private string _lastVal;
-
     void Start()
     {
-        TextMeshPro.text = $"{Prefix} {Printer.PrintStatus}";
+        StartCoroutine(SetStatus());
     }
 
-    void Update()
+    IEnumerator SetStatus()
     {
-        if (_lastVal == Printer.PrintStatus) return;
-        
-        _lastVal = Printer.PrintStatus;
-        TextMeshPro.text = $"{Prefix} {Printer.PrintStatus}";
+        while (true)
+        {
+            TextMeshPro.text = $"{Prefix} {Printer.PrintStatus2}";
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }

@@ -7,7 +7,9 @@ public class MoveCamera : MonoBehaviour
     public GameObject Target;
 
     // Update is called once per frame
-    void Update() => transform.position = cameraPosition.position;
+   // void Update() 
+
+    private void FixedUpdate() => transform.position = cameraPosition.position;
 
 
     public void MoveToTarget()

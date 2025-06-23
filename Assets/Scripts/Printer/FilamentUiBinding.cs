@@ -1,3 +1,4 @@
+using PrinterBehaviour;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 public class FilamentUiBinding : MonoBehaviour
 {
-    public Printer Printer;
+    public PrintBehaviour Printer;
     public string Prefix;
     private float _lastVal;
     public TextMeshProUGUI TextMeshPro;

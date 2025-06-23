@@ -6,11 +6,6 @@ public class CameraController : MonoBehaviour
     private float xRotation;
     private float yRotation;
     
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     void Update()
     {
         if (Cursor.lockState == CursorLockMode.Locked)
@@ -24,14 +19,6 @@ public class CameraController : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
             orientation.rotation = Quaternion.Euler(0, yRotation, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if(Cursor.lockState == CursorLockMode.Locked)
-                Cursor.lockState = CursorLockMode.None;
-                else
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

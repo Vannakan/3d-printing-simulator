@@ -10,6 +10,15 @@ TagManager:
   - Spool
   - Viewport
   - ViewportSlot
+  - SpoolHolder
+  - DeliveryBox
+  - Floor
+  - TruckTrigger
+  - StorageContainer
+  - DraggableItemContainer
+  - ToolbarItem
+  - PlayerInventory
+  - TruckDestroy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +28,7 @@ TagManager:
   - UI
   - ViewportSlot
   - Screen
-  - 
+  - Carryable
   - 
   - 
   - 

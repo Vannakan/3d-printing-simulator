@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7e180b8ed35e34b9d88f3ffe4b67b1, type: 3}
+  m_Name: PhoneHolder
+  m_EditorClassIdentifier: 
+  Name: Phone Holder
+  Application: 0
+  RequiredFlexibility: 0
+  RequiredDetail: 1
+  RequiredStrength: 1
+  Mesh: {fileID: 481141635650803563, guid: f55176afc45784f4c95b408a0db29a30, type: 3}

@@ -21,6 +21,6 @@ public class PlayerStats : MonoBehaviour
             RequiredXp = (RequiredXp + 100) * 1.1;
         }
 
-        PlayerHud.UpdateXpText(CurrentXp, CurrentLevel, RequiredXp);
+    //    PlayerHud.UpdateXpText(CurrentXp, CurrentLevel, RequiredXp);
     }
 }

@@ -1,3 +1,4 @@
+using Assets.ScriptableObjects;
 using UnityEngine;
 
 public class LerpToViewpoint : MonoBehaviour
@@ -8,6 +9,8 @@ public class LerpToViewpoint : MonoBehaviour
     private Transform _parent;
     private bool _occupied;
     private Vector3 _initialPosition;
+    public float LerpSpeed = 0f;
+    public PlayerState PlayerState;
 
     void Start()
     {
@@ -25,11 +28,17 @@ public class LerpToViewpoint : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
                 if (Physics.Raycast(ray, out RaycastHit vpHit, InteractDistance, layer_mask))
                 {
+                    PlayerState.PlayerMode = Assets.Scripts.Player.PlayerMode.Interact;
+
                     Viewpoint = vpHit.collider.transform;
                     transform.parent = null;
                     _transitioning = true;
                     Cursor.lockState = CursorLockMode.None;
-                    GameObject.Find("Player").GetComponentInChildren<Canvas>().enabled = false;
+                    var canvas = GameObject.Find("Player").GetComponentInChildren<Canvas>();
+                    if(canvas is not null)
+                    {
+                        canvas.enabled = false;
+                    }
                 }
             }
             else if (_occupied || _transitioning)
@@ -40,7 +49,15 @@ public class LerpToViewpoint : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 transform.parent = _parent;
                 transform.localPosition = _initialPosition;
-                GameObject.Find("Player").GetComponentInChildren<Canvas>().enabled = true;
+               // GameObject.Find("Player").GetComponentInChildren<Canvas>().enabled = true;
+
+                var canvas = GameObject.Find("Player").GetComponentInChildren<Canvas>();
+                if (canvas is not null)
+                {
+                    canvas.enabled = true;
+                }
+
+                PlayerState.PlayerMode = Assets.Scripts.Player.PlayerMode.Walk;
             }
         }
 
@@ -54,8 +71,8 @@ public class LerpToViewpoint : MonoBehaviour
             }
 
             //Debug.Log($"{Vector3.Distance(gameObject.transform.position, Viewpoint.transform.position)}");
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, Viewpoint.position, Time.deltaTime);
-            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Viewpoint.rotation, Time.deltaTime);
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, Viewpoint.position, Time.deltaTime * LerpSpeed);
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Viewpoint.rotation, Time.deltaTime * LerpSpeed);
         }
     }
 }
